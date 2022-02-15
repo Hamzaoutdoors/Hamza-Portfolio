@@ -1,18 +1,28 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from 'react-router-dom';
-import styled from 'styled-components';
+import { useState } from 'react';
+import TopBar from './components/header/TopBar';
+import Intro from './components/intro/Intro';
+import Portfolio from './components/portfolio/Portfolio';
+import Works from './components/works/Works';
+import Testimonials from './components/testimonials/Testimonials';
+import Contact from './components/contact/Contact';
+import Menu from './components/menu/Menu';
+import './app.scss';
 
-const App = () => (
-  <Router>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  </Router>
-);
+const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  return (
+    <div className="app">
+      <TopBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <div className="sections">
+        <Intro />
+        <Portfolio />
+        <Works />
+        <Testimonials />
+        <Contact />
+      </div>
+    </div>
+  );
+};
 
 export default App;
