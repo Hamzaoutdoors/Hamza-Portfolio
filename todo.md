@@ -1,47 +1,29 @@
-## 1 - Details Page:
-  - [x] 1 - Add path to the reserve button => leading to the add a reservation form, with some params that will make a preselection of some data, depending on wich car the user clicked for reservation.
+## 1 - Portfolio section:
+  - [x] 1 - Add a portfolio section to your resume
+  - [] 2 - Add at least 3 portfolio projects
+  - [] 3 - Add a link to each project
+  - [] 4 - Add a description of each project
+  - [] 5 - Add a screenshot of each project
+  
+## 2 - Works section:
 
-## 2 - Add Item Page [Optional]:
+  - [x] 1 - Add a works section to your resume
+  - [] 2 - Add at least 3 works experiences
+  - [] 3 - Fix sidebar cards
 
-  - [x] 1 - Make a custom select Option using a Js file, 
-  where we'll hide the original select/option and create our own list of items;
 
-## 3 - Sidebar;
+## 3 - Resume button;
 
-  - [x] 1 - Make props to change style of the logout option || make the logout button in another component
-  - [x] 2 - Check font-styles for links;
-  - [ ] 3 - Mobile Version, when user opens modal, window.overflowY should be hidden;
-  - [ ] 4 - Make sure that login/signup links are correctly displayed in the sidebar;
+  - [x] 1 - Add a resume button to your resume in 
+    the footer
+  - [] 2 - Add a link to your resume
+  - [] 3 - Add a download button to your resume
 
-## 4 - Redux Slices
-- Login: 
-  - [x] Make Sure the User can Login/SignUp;
-  - [x] Make Sure the User can SignOut;
-  - [ ] Display the Error messages that you get from API;
-  - [x] User will see only available pages when not logged_in;
-- Cars:
-  - [x] 1 - Add Extra-Reducers to connect with the Api;
-  - [x] 2 - Check logic of all redux thunks to ensure that the correct data is being fetched/posted from/to the api;
-- Reservations:
-  - [ ] 1 - Add Extra-Reducers to connect with the Api;
-  - [ ] 2 - Check logic of all redux thunks to ensure that the correct data is being fetched/posted from/to the api;
+## 3 - Contact Form:
 
-## 5 - Details Page:
-  - [x] 1 - Connect Api/Redux to get the description of the car;
+  - [x] 1 - Add a contact form to your resume
+  - [x] 2 - Add formspre code to form
+  - [x] 3 - Add a submit button to your form
 
-## 6 - Add a Car: 
 
-  - [x] 1 - Connect Api/Redux to Annouce a car;
 
-## 7 - Reserve a Car;
-
-  - [ ] 1 - Connecto Api/Redux to reserve a car;
-
-## 8 - Remove a Car;
-  - [x] 1 - Connecto Api/Redux to remove a car;
-
-## 9 - When unlogged; 
-  - [ ] 1- Hide changes all buttons that need authentication;
-## 8 - Tests;
-
-  - [ ] 1- make tests

@@ -1,0 +1,140 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable implicit-arrow-linebreak */
+import './contact.scss';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import axios from 'axios';
+
+const ContactWrapper = styled.div``;
+const Left = styled.div``;
+const Right = styled.div``;
+
+const Error = styled.div`
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 500;
+  `;
+
+const Contact = () => {
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  });
+
+  const [inputs, setInputs] = useState({
+    email: '',
+    message: '',
+  });
+
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg },
+      });
+      setInputs({
+        email: '',
+        message: '',
+      });
+    } else {
+      setStatus({
+        info: { error: true, msg },
+      });
+    }
+  };
+  const handleOnChange = (e) => {
+    e.persist();
+    setInputs((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null },
+    });
+  };
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+    axios({
+      method: 'POST',
+      url: 'https://formspree.io/f/mayadege',
+      data: inputs,
+    })
+      // eslint-disable-next-line no-unused-vars
+      .then((response) => {
+        handleServerResponse(
+          true,
+          'Thank you, your message has been submitted.',
+        );
+      })
+      .catch((error) => {
+        handleServerResponse(false, error.response.data.error);
+      });
+  };
+
+  return (
+    <ContactWrapper className="contact" id="contact">
+      <Left className="left">
+        <img src="assets/images/contactme1.svg" alt="" />
+      </Left>
+      <Right className="right">
+        <h2>CONTACT.</h2>
+        <h3>
+          I am always open to new opportunities and would love to hear from you.
+        </h3>
+        <form onSubmit={handleOnSubmit}>
+          <input
+            id="name"
+            type="text"
+            placeholder="Full Name"
+            name="name"
+            onChange={handleOnChange}
+            className="form-control"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className="form-control"
+            id="email"
+            onChange={handleOnChange}
+            required
+          />
+          <textarea
+            placeholder="Enter your message"
+            className="form-control"
+            name="message"
+            row="3"
+            maxLength="500"
+            id="message"
+            onChange={handleOnChange}
+            required
+          />
+          <button type="submit" disabled={status.submitting}>
+            {!status.submitting
+              ? !status.submitted
+                ? 'Get In Touch'
+                : 'Submitted'
+              : 'Submitting...'}
+          </button>
+          {status.info.error && (
+          <Error>
+            Error:
+            {' '}
+            {status.info.msg}
+          </Error>
+          )}
+          {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+        </form>
+      </Right>
+    </ContactWrapper>
+  );
+};
+
+export default Contact;
