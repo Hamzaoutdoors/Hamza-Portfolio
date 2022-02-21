@@ -5,20 +5,6 @@
  <div align="center">
   <em align="center" style>" All our dreams can come true, if we have the courage to pursue them. "</em><strong> - Walt Disney</strong>
   </div>
-  
-# Portfolio project
-
-
-![Template 3-Main](https://user-images.githubusercontent.com/80895497/125659078-db3de05e-7d04-4a01-b28d-ec8cd070644c.png)
-
-<p align="center">
-  <img alt="popup" src="https://user-images.githubusercontent.com/80895497/127324176-a8f124f9-c1a1-47a5-8cb9-28d7788facc0.PNG">
-</p>
-Screenshot of Template 2, that I choose for my my Portfolio
-
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-The goal for this project is to keep practicing linters, learn how
 
 ## Learning objectives
 
@@ -30,7 +16,6 @@ The goal for this project is to keep practicing linters, learn how
 - Use images and backgrounds to enhance the look of the website.
 - Learn React Hooks and use them to create a dynamic UI.
 - Use Sass to style the website.
-
 
 ## Built With
 
@@ -49,7 +34,7 @@ The goal for this project is to keep practicing linters, learn how
 
 > Welcome to github page of my project
 
-[Live Demo Link](https://hamzaoutdoors.github.io/My_Portfolio/)
+[Live Demo Link](https://hamza-ellaouzi.netlify.app/)
 
 ## Getting Started
 

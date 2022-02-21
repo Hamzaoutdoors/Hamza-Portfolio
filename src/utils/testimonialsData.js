@@ -22,13 +22,13 @@ const testimonialsData = [
   },
   {
     id: 3,
-    name: 'Enio de Souza',
-    title: 'Full-Stack Web Developer',
+    name: 'Sohaib El Haddad',
+    title: 'Ruby on Rails Developer',
     img:
-        './assets/images/enio.png',
+        './assets/images/sohaib.png',
     icon: './assets/linkedin.png',
     desc:
-        'Hamza always willing to help others by sharing his knowledge and communicating with his teammates in a kind manner',
+        'I studied with Hamza in the two years preparatory classes after high school, I was always impressed by his dedication to getting the job well done.',
   },
 ];
 
