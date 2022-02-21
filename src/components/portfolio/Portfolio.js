@@ -1,22 +1,20 @@
 import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import PortfolioList from '../portfolioList/PortfolioList';
+import PortfolioCard from './PortfolioCard';
 import './portfolio.scss';
 import {
-  featuredPortfolio,
   webPortfolio,
   mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
+  credentials,
 } from '../../utils/portfolioData';
+
+const Container = styled.div``;
 
 export default function Portfolio() {
   const [selected, setSelected] = useState('featured');
   const [data, setData] = useState([]);
   const list = [
-    {
-      id: 'featured',
-      title: 'Featured',
-    },
     {
       id: 'web',
       title: 'Web App',
@@ -26,40 +24,33 @@ export default function Portfolio() {
       title: 'Mobile App',
     },
     {
-      id: 'design',
-      title: 'Design',
-    },
-    {
-      id: 'content',
-      title: 'Content',
+      id: 'credentials',
+      title: 'Credentials',
     },
   ];
 
   useEffect(() => {
     switch (selected) {
-      case 'featured':
-        setData(featuredPortfolio);
-        break;
       case 'web':
         setData(webPortfolio);
         break;
       case 'mobile':
         setData(mobilePortfolio);
         break;
-      case 'design':
-        setData(designPortfolio);
-        break;
-      case 'content':
-        setData(contentPortfolio);
+      case 'credentials':
+        setData(credentials);
         break;
       default:
-        setData(featuredPortfolio);
+        setData(webPortfolio);
     }
   }, [selected]);
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+      <h1>Portfolio & Credentials</h1>
+      <h2>
+        Here are some of my projects and credentials that I have worked on.
+      </h2>
       <ul>
         {list.map((item) => (
           <PortfolioList
@@ -71,17 +62,11 @@ export default function Portfolio() {
           />
         ))}
       </ul>
-      <div className="container">
+      <Container className="container">
         {data.map((d) => (
-          <div className="item" key={d.title}>
-            <img
-              src={d.img}
-              alt=""
-            />
-            <h3>{d.title}</h3>
-          </div>
+          <PortfolioCard item={d} key={d.id} />
         ))}
-      </div>
+      </Container>
     </div>
   );
 }
