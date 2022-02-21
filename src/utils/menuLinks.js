@@ -8,7 +8,7 @@ const links = [
     href: '#portfolio',
   },
   {
-    name: 'Works',
+    name: 'Skills',
     href: '#works',
   },
   {
