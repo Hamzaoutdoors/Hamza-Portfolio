@@ -4,7 +4,7 @@
   background-color: white;
   display: flex;
 
-  @include mobile{
+  @include mobile {
     flex-direction: column;
     align-items: center;
   }
@@ -25,19 +25,20 @@
       justify-content: center;
       float: right;
 
-      @include mobile{
+      @include mobile {
         align-items: flex-start;
       }
 
       img {
         height: 100%;
 
-        @include mobile{
+        @include mobile {
           height: 50%;
         }
       }
     }
   }
+
   .right {
     flex: 0.5;
     position: relative;
@@ -53,7 +54,7 @@
       flex-direction: column;
       justify-content: center;
 
-      @include mobile{
+      @include mobile {
         padding-left: 0;
         align-items: center;
       }
@@ -62,23 +63,25 @@
         font-size: 4.2rem;
         margin: 10px 0;
 
-        @include mobile{
+        @include mobile {
           font-size: 2.5rem;
           align-self: flex-start;
         }
       }
+
       h2 {
         font-size: 35px;
 
-        @include mobile{
+        @include mobile {
           font-size: 25px;
           align-self: flex-start;
         }
       }
+
       h3 {
         font-size: 30px;
 
-        @include mobile{
+        @include mobile {
           font-size: 15px;
           align-self: flex-start;
         }
@@ -93,12 +96,13 @@
         }
 
         @keyframes blink {
-            50%{
-                opacity: 1;
-            }
-            100%{
-                opacity: 0;
-            }
+          50% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 0;
+          }
         }
       }
 
@@ -112,12 +116,12 @@
         color: white;
         margin-top: 20px;
 
-        @include mobile{
+        @include mobile {
           margin: 20px 0;
         }
-
       }
     }
+
     .down {
       position: absolute;
       bottom: 10px;
@@ -134,12 +138,12 @@
         }
       }
 
-      @include mobile{
+      @include mobile {
         left: 90%;
       }
     }
 
-    @include mobile{
+    @include mobile {
       margin: 0;
       flex-direction: column;
     }

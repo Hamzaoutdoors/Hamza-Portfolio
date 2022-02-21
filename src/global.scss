@@ -3,9 +3,6 @@ $mainColor: #203983;
 $mobileWidth: 768px;
 
 @mixin mobile {
-    @media (max-width: #{$mobileWidth}){
-        @content
-    }
-
+  @media (max-width: #{$mobileWidth}) {
+    @content; }
 }
-

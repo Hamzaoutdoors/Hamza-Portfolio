@@ -35,7 +35,7 @@
           margin: 5px;
         }
 
-        @include mobile{
+        @include mobile {
           margin-right: 10px;
           font-size: 30px;
         }
@@ -46,7 +46,7 @@
         align-items: center;
         margin-left: 30px;
 
-        @include mobile{
+        @include mobile {
           display: none;
         }
 
@@ -92,9 +92,11 @@
           background-color: white;
           transform: rotate(45deg);
         }
+
         &:nth-child(2) {
           opacity: 0;
         }
+
         &:last-child {
           background-color: white;
           transform: rotate(-45deg);

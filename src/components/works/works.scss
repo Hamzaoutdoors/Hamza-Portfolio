@@ -9,7 +9,7 @@
   justify-content: center;
   position: relative;
 
-  @include mobile{
+  @include mobile {
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
@@ -36,7 +36,7 @@
     position: absolute;
     cursor: pointer;
     background-color: white;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 
     @include mobile {
       display: none;
@@ -129,32 +129,37 @@
                 }
               }
             }
+
             h2 {
               font-size: 20px;
 
-              @include mobile{
+              @include mobile {
                 font-size: 13px;
               }
             }
+
             p {
               font-size: 13px;
-              @include mobile{
+
+              @include mobile {
                 display: none;
               }
             }
+
             span > * {
               font-size: 1rem !important;
               font-weight: 600;
               cursor: pointer;
 
-              @include mobile{
-                font-size: .5rem !important;
+              @include mobile {
+                font-size: 0.5rem !important;
                 width: 80px;
                 margin: 0 auto;
               }
             }
           }
         }
+
         .right {
           flex: 8;
           border-radius: 20px;
