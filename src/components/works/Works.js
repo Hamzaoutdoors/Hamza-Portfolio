@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './works.scss';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 import worksData from '../../utils/worksData';
+import SkillModal from './SkillModal';
 
 export default function Works() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,6 +16,7 @@ export default function Works() {
 
   return (
     <div className="works" id="works">
+      <h1>My Skills</h1>
       <div
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
@@ -29,12 +31,14 @@ export default function Works() {
                   </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
-                  <span>Projects</span>
+                  <span>
+                    <SkillModal SkillDetail={d} />
+                  </span>
                 </div>
               </div>
               <div className="right">
                 <img
-                  src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"
+                  src={d.img}
                   alt=""
                 />
               </div>
@@ -47,14 +51,14 @@ export default function Works() {
         onClick={() => handleClick('left')}
         aria-hidden="true"
       >
-        <ArrowLeftOutlined />
+        <ArrowLeftOutlined style={{ fontSize: '2rem' }} />
       </div>
       <div
         className="arrow right"
         onClick={() => handleClick()}
         aria-hidden="true"
       >
-        <ArrowRightOutlined />
+        <ArrowRightOutlined style={{ fontSize: '2rem' }} />
       </div>
     </div>
   );
