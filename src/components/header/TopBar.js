@@ -3,6 +3,7 @@ import './topbar.scss';
 import {
   Person, Mail,
 } from '@material-ui/icons';
+import { motion } from 'framer-motion';
 
 const TopBar = ({ menuOpen, setMenuOpen }) => {
   const handleMenuClick = () => {
@@ -14,7 +15,45 @@ const TopBar = ({ menuOpen, setMenuOpen }) => {
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
-            Hamza.
+            <motion.img
+              src="./assets/images/2.png"
+              alt="logo"
+              initial={{
+                opacity: 0,
+                translateX: -10,
+
+              }}
+              animate={{
+                opacity: 1,
+                translateX: 0,
+              }}
+              transition={{
+                duration: 1,
+                delay: 0.5,
+                ease: 'easeOut',
+                yoyo: Infinity,
+              }}
+            />
+            Hamza
+            <motion.img
+              src="./assets/images/1.png"
+              alt="logo"
+              initial={{
+                opacity: 0,
+                translateX: 10,
+
+              }}
+              animate={{
+                opacity: 1,
+                translateX: 0,
+              }}
+              transition={{
+                duration: 2,
+                delay: 1,
+                ease: 'easeOut',
+                yoyo: Infinity,
+              }}
+            />
           </a>
           <div className="itemContainer">
             <Person className="icon" />
