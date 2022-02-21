@@ -6,7 +6,10 @@ const Testimonials = () => (
     <h1>Testimonials</h1>
     <div className="container">
       {testimonialsData.map((test) => (
-        <div className={test.featured ? 'card featured' : 'card'} key={test.id}>
+        <div
+          className={test.featured ? 'card featured' : 'card'}
+          key={test.id}
+        >
           <div className="top">
             <img src="assets/right-arrow.png" className="left" alt="" />
             <img

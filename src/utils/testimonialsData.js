@@ -1,34 +1,34 @@
 const testimonialsData = [
   {
     id: 1,
-    name: 'Tom Durden',
-    title: 'Senior Developer',
+    name: 'Leonardo de Andrade',
+    title: 'IT Manager',
     img:
-        'https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    icon: 'assets/twitter.png',
+        './assets/images/leo.png',
+    icon: './assets/linkedin.png',
     desc:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.',
+        'Hamza is a self-motivated person with an excellent vision of the process to create the best solutions for any type of problem.',
   },
   {
     id: 2,
-    name: 'Alex Kalinski',
-    title: 'Co-Founder of DELKA',
+    name: 'Nelsino Francisco',
+    title: 'Software Engineer',
     img:
-        'https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    icon: 'assets/youtube.png',
+        './assets/images/nelsino.png',
+    icon: 'assets/twitter.png',
     desc:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ',
+        'I love this boy! So easy to work with, always helpful and can always give you insights on how to make your code better you would love to have him as a coding partner',
     featured: true,
   },
   {
     id: 3,
-    name: 'Martin Harold',
-    title: 'CEO of ALBI',
+    name: 'Enio de Souza',
+    title: 'Full-Stack Web Developer',
     img:
-        'https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-    icon: 'assets/linkedin.png',
+        './assets/images/enio.png',
+    icon: './assets/linkedin.png',
     desc:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem',
+        'Hamza always willing to help others by sharing his knowledge and communicating with his teammates in a kind manner',
   },
 ];
 
