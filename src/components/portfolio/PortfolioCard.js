@@ -113,6 +113,11 @@ const CredentialButton = styled.a`
       color: #333;
       transform: scale(1.1);
     }
+
+    ${mobile({
+    fontSize: '0.9rem',
+    padding: '3px 6px',
+  })};
 `;
 
 const PortfolioCard = (props) => {

@@ -86,7 +86,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        'https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/36454763',
+        './assets/certificates/htmlcss-cred.png',
   },
   {
     id: 2,
@@ -95,7 +95,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        'https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/38503367',
+        './assets/certificates/js-cred.png',
   },
   {
     id: 3,
@@ -104,7 +104,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        'https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/40244818',
+        './assets/certificates/react-cred.png',
   },
   {
     id: 4,
@@ -113,7 +113,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        'https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/42257736',
+        './assets/certificates/ruby-cred.png',
   },
   {
     id: 5,
@@ -122,7 +122,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        'https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/44877706',
+        './assets/certificates/ror-cred.png',
   },
   {
     id: 6,
@@ -131,9 +131,9 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        'https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/45950762',
+        './assets/certificates/diplomat.png',
     badgeImg:
-        'https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/45950762',
+        './assets/certificates/badge.png',
     fullStack: true,
   },
 ];

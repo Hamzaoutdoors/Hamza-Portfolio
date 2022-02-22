@@ -17,11 +17,11 @@ export default function Portfolio() {
   const list = [
     {
       id: 'web',
-      title: 'Web App',
+      title: 'Web Design',
     },
     {
       id: 'mobile',
-      title: 'Mobile App',
+      title: 'Mobile Design',
     },
     {
       id: 'credentials',
