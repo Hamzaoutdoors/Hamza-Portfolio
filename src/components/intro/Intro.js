@@ -22,7 +22,7 @@ export default function Intro() {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ['Full-Stack Web Developer', 'ReactJS Enthusiast', 'GIS Engineer'],
+      strings: ['Ruby on Rails Developer', 'ReactJS Enthusiast', 'GIS Engineer'],
     });
   }, []);
 
@@ -39,7 +39,7 @@ export default function Intro() {
           translateX: 0,
         }}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           delay: 0.2,
         }}
       >
@@ -72,7 +72,7 @@ export default function Intro() {
         }}
         transition={{
           duration: 0.6,
-          delay: 0.3,
+          delay: 0.4,
         }}
       >
         <div className="imgContainer">
