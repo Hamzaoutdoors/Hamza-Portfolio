@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable implicit-arrow-linebreak */
 import './contact.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
@@ -23,6 +23,7 @@ const Contact = () => {
   });
 
   const [inputs, setInputs] = useState({
+    name: '',
     email: '',
     message: '',
   });
@@ -35,6 +36,7 @@ const Contact = () => {
         info: { error: false, msg },
       });
       setInputs({
+        name: '',
         email: '',
         message: '',
       });
@@ -77,6 +79,18 @@ const Contact = () => {
       });
   };
 
+  useEffect(() => {
+    if (status.submitted) {
+      setTimeout(() => {
+        setStatus({
+          submitted: false,
+          submitting: false,
+          info: { error: false, msg: null },
+        });
+      }, 5000);
+    }
+  }, [status.submitted]);
+
   return (
     <ContactWrapper className="contact" id="contact">
       <Left className="left">
@@ -96,6 +110,7 @@ const Contact = () => {
             onChange={handleOnChange}
             className="form-control"
             required
+            value={inputs.name}
           />
           <input
             type="email"
@@ -104,6 +119,7 @@ const Contact = () => {
             className="form-control"
             id="email"
             onChange={handleOnChange}
+            value={inputs.email}
             required
           />
           <textarea
@@ -113,6 +129,7 @@ const Contact = () => {
             row="3"
             maxLength="500"
             id="message"
+            value={inputs.message}
             onChange={handleOnChange}
             required
           />
