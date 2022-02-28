@@ -50,6 +50,9 @@ const SkillsContainer = styled(DialogContent)`
 const Skill = styled(Typography)`
   font-size: 1rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0px 0px 0px 1px ${(props) => props.color};
   font-family: 'Urbanist', sans-serif;
   border-radius: 15px !important;
@@ -62,10 +65,16 @@ const Skill = styled(Typography)`
   background-color: ${(props) => props.color} !important;
 
   &:hover {
-    background-color: white !important;
-    color: ${(props) => props.color} !important;
     transform: scale(1.1) !important;
   }
+`;
+
+const SkillLogo = styled(Typography)`
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px !important;
+  padding: 0.3rem !important;
+  text-align: center !important;
 `;
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -136,7 +145,10 @@ const SkillsDetail = ({ SkillDetail }) => {
         </BootstrapDialogTitle>
         <SkillsContainer dividers>
           {skills && skills.map((skill) => (
-            <Skill key={skill.id} color={skill.color}>{skill.name}</Skill>
+            <Skill key={skill.id} color={skill.color}>
+              {skill.logo && <SkillLogo src={skill.logo} alt={skill.name} variant="img" component="img" />}
+              {skill.name}
+            </Skill>
           ))}
         </SkillsContainer>
       </BootstrapDialog>
