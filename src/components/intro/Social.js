@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  GitHub, Twitter, ContactPage, FacebookRounded, LinkedIn,
+  GitHub, Twitter, ContactPage, LinkedIn,
 } from '@mui/icons-material';
 import { phone } from '../../responsive';
 
@@ -71,11 +71,6 @@ const Social = () => (
       <SocialItem>
         <SocialLink href="https://twitter.com/EllaouziHamza" target="_blank" rel="noreferrer">
           <Twitter style={{ fontSize: '2rem', color: '#1DA1F2' }} />
-        </SocialLink>
-      </SocialItem>
-      <SocialItem hideMobile>
-        <SocialLink href="https://web.facebook.com/profile.php?id=100008420561138" target="_blank" rel="noreferrer">
-          <FacebookRounded style={{ fontSize: '2rem', color: '#3b5998' }} />
         </SocialLink>
       </SocialItem>
       <SocialItem hideDesk>
