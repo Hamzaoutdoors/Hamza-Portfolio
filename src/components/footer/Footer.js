@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  LinkedIn, Twitter, GitHub, Facebook, LocationOn, PhoneInTalk, MailOutline, Email,
+  LinkedIn, Twitter, GitHub, LocationOn, PhoneInTalk, MailOutline, Email,
 } from '@mui/icons-material';
 
 import './footer.scss';
@@ -30,9 +30,6 @@ const Footer = () => (
         </a>
         <a href="https://github.com/Hamzaoutdoors" target="_blank" rel="noreferrer">
           <GitHub />
-        </a>
-        <a href="https://web.facebook.com/profile.php?id=100008420561138" target="_blank" rel="noreferrer">
-          <Facebook />
         </a>
         <a href="mailto:ellaouzihamza@gmail.com?subject=subject&cc=cc@example.com" target="_blank" rel="noreferrer">
           <MailOutline />
