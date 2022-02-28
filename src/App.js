@@ -7,6 +7,7 @@ import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
 import Menu from './components/menu/Menu';
 import Footer from './components/footer/Footer';
+import GoUp from './components/goUp/GoUP';
 
 import './app.scss';
 
@@ -16,6 +17,7 @@ const App = () => {
     <div className="app">
       <TopBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <GoUp />
       <div className="sections">
         <Intro />
         <Portfolio />
