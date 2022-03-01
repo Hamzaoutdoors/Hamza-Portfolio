@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import {
-  GitHub, Twitter, ContactPage, LinkedIn,
-} from '@mui/icons-material';
 import { phone } from '../../responsive';
 
 const Container = styled.div``;
@@ -22,7 +19,7 @@ const SocialList = styled.ul`
 `;
 
 const SocialItem = styled.li`
-    margin: 10px 0;
+    margin: 2px 0;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -30,9 +27,10 @@ const SocialItem = styled.li`
     list-style: none;
     border-radius: 50%;
     display: ${(props) => (props.hideDesk ? 'none' : 'flex')};
+    transition: all 0.2s ease-in-out;
 
     &:hover {
-        transform: translateY(-3px);
+      transform: rotate(360deg) scale(1.1);
     }
 
     ${phone({
@@ -51,31 +49,56 @@ const SocialLink = styled.a`
     color: #1e1e1e;
 
     &:hover {
-        color: #0177b5;
+      transform: rotate(360deg) scale(1.3);
     }
 `;
 
 const Social = () => (
   <Container>
-    <SocialList>
+    <SocialList class="socials">
       <SocialItem>
-        <SocialLink href="https://github.com/Hamzaoutdoors" target="_blank" rel="noreferrer">
-          <GitHub style={{ fontSize: '2rem' }} />
+        <SocialLink
+          href="https://github.com/Hamzaoutdoors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/socials/github.svg" alt="github icon" />
         </SocialLink>
       </SocialItem>
       <SocialItem>
-        <SocialLink href="https://www.linkedin.com/in/hamzaellaouzi/?locale=en_US" target="_blank" rel="noreferrer">
-          <LinkedIn style={{ fontSize: '2rem', color: '#203983', borderRadius: '50%' }} />
+        <SocialLink
+          href="https://www.linkedin.com/in/hamzaellaouzi/?locale=en_US"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/socials//linkedin.svg" alt="linkedIn icon" />
         </SocialLink>
       </SocialItem>
       <SocialItem>
-        <SocialLink href="https://twitter.com/EllaouziHamza" target="_blank" rel="noreferrer">
-          <Twitter style={{ fontSize: '2rem', color: '#1DA1F2' }} />
+        <SocialLink
+          href="https://angel.co/u/hamza-ellaouzi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/socials/angelist.svg" alt="angelist icon" />
         </SocialLink>
       </SocialItem>
-      <SocialItem hideDesk>
-        <SocialLink href="https://drive.google.com/file/d/1ZP4CqrDBnGgCJMPAcoTD-GJiGErRMFqD/view" target="_blank" rel="noreferrer">
-          <ContactPage style={{ fontSize: '2rem' }} />
+      <SocialItem>
+        <SocialLink
+          href="https://twitter.com/EllaouziHamza"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/socials/twitter.svg" alt="twitter icon" />
+        </SocialLink>
+      </SocialItem>
+      <SocialItem>
+        <SocialLink
+          href="https://medium.com/@hamzaellaouzi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/socials/medium.svg" alt="medium icon" />
         </SocialLink>
       </SocialItem>
     </SocialList>
