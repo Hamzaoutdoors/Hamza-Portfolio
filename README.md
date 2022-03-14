@@ -50,7 +50,7 @@ Node updated version
 
 ## Authors
 
-👤 **EllaouziHamza**
+👤 **Ellaouzi Hamza**
 
 - GitHub: [@hamzaoutdoors](https://github.com/Hamzaoutdoors)
 
