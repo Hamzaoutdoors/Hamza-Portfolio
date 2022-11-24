@@ -55,16 +55,17 @@ const Title = styled.h3`
 const Image = styled.img`
    width: 100%;
    height: 100%;
-   object-fit: cover;
+   object-fit: fill;
    z-index: 1;
+   border-radius: 25px;
 `;
 
 const Badge = styled.img`
     position: absolute;
     bottom: -15px;
     right: -25px;
-    width: 50%;
-    height: 60%;
+    width: 50px;
+    height: 50px;
     z-index: 2;
 `;
 
@@ -149,7 +150,7 @@ const PortfolioCard = (props) => {
       className="item"
     >
       <Title>{title}</Title>
-      <Image src={img} alt="" />
+      <Image src={img} alt="project iamge" />
       {fullStack
             && (
             <Badge

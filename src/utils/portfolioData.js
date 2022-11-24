@@ -76,6 +76,22 @@ export const mobilePortfolio = [
     img:
         'https://i.ibb.co/L5FjKvr/Yellow-and-Black-Modern-Automobile-Car-Project-Outline-Document-940-940-px-940-788-px.png',
   },
+  {
+    id: 5,
+    title: 'R3 LOGISTICS',
+    sourceUrl: 'https://github.com/Hamzaoutdoors/R3_front',
+    liveUrl: 'https://www.figma.com/file/tUtlSufwewx5IlsG7exQye/R3-Logistic-%231?node-id=328%3A3156&t=plkTWmZ7nCpuzRXl-0',
+    img:
+        'https://i.ibb.co/2cSq2PR/Yellow-and-Black-Modern-Automobile-Car-Project-Outline-Document-940-940-px-940-788-px.png',
+  },
+  {
+    id: 6,
+    title: 'NeoKraal Market Place',
+    sourceUrl: 'https://github.com/Hamzaoutdoors/NeokraalV2',
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.neo_front',
+    img:
+        'https://user-images.githubusercontent.com/80895497/162425705-e4a64bc3-1ea4-4c12-bda4-614e98ae0898.PNG',
+  },
 ];
 
 export const credentials = [

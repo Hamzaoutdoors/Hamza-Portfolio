@@ -126,7 +126,6 @@ const Contact = () => {
             placeholder="Enter your message"
             className="form-control"
             name="message"
-            row="3"
             maxLength="500"
             id="message"
             value={inputs.message}
@@ -141,11 +140,11 @@ const Contact = () => {
               : 'Submitting...'}
           </button>
           {status.info.error && (
-          <Error>
-            Error:
-            {' '}
-            {status.info.msg}
-          </Error>
+            <Error>
+              Error:
+              {' '}
+              {status.info.msg}
+            </Error>
           )}
           {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
         </form>

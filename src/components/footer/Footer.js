@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  LinkedIn, Twitter, GitHub, LocationOn, PhoneInTalk, MailOutline, Email,
+  LinkedIn, Twitter, GitHub, LocationOn, Phone, MailOutline, Email,
 } from '@mui/icons-material';
 
 import './footer.scss';
@@ -40,13 +40,13 @@ const Footer = () => (
       <div>
         <LocationOn className="i" />
         <p>
-          <span>Saada district 90081</span>
+          <span>Val Fleuri district 90081</span>
           {' '}
           Tangier, Morocco
         </p>
       </div>
       <div>
-        <PhoneInTalk className="i" />
+        <Phone className="i" />
         <p> (+212) 691 475 161</p>
       </div>
       <div>
