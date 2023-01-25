@@ -22,7 +22,7 @@ export default function Intro() {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ['Ruby on Rails Developer', 'ReactJS Enthusiast', 'GIS Engineer'],
+      strings: ['Ruby on Rails Developer', 'ReactJS Enthusiast', 'obile development'],
     });
   }, []);
 
@@ -52,7 +52,7 @@ export default function Intro() {
             {' '}
             <span ref={textRef} />
           </h3>
-          <ResumeButton href="https://drive.google.com/file/d/1ZP4CqrDBnGgCJMPAcoTD-GJiGErRMFqD/view" className="btn" target="_blank" rel="noreferrer">
+          <ResumeButton href="https://drive.google.com/file/d/1A2ifffhVdJ9nl4aWCAXGLMOrGUEf2uPs/view?usp=sharing" className="btn" target="_blank" rel="noreferrer">
             Get My Resume
           </ResumeButton>
         </div>

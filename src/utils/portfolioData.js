@@ -47,11 +47,11 @@ export const webPortfolio = [
 export const mobilePortfolio = [
   {
     id: 1,
-    title: 'Covid19 Tracker App',
-    sourceUrl: 'https://github.com/Hamzaoutdoors/Corona-Tracker__react-capstone',
-    liveUrl: 'https://ho-coronatracker21.netlify.app/',
+    title: 'Yalatsara trip booking',
+    sourceUrl: 'https://www.figma.com/file/vZ5uF8m5EOVyHSxHGN3MiN/Design-kits?node-id=1%3A67&t=GLXm1wAg6EuWcx7c-1',
+    liveUrl: 'https://www.figma.com/file/vZ5uF8m5EOVyHSxHGN3MiN/Design-kits?node-id=1%3A67&t=GLXm1wAg6EuWcx7c-1',
     img:
-        'https://i.ibb.co/wLH7Ph1/5.png',
+        'https://i.ibb.co/x33QRJw/Thumbnail.png',
   },
   {
     id: 2,

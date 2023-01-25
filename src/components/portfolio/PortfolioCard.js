@@ -28,9 +28,9 @@ const Container = styled.div`
     color: #fff;
     margin: 20px;
     width: 25%;
-    height: 200px;
+    min-height: 100px;
     border-radius: 25px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgb(240, 239, 239);
     display: flex;
     justify-content: center;
@@ -55,9 +55,9 @@ const Title = styled.h3`
 const Image = styled.img`
    width: 100%;
    height: 100%;
-   object-fit: fill;
+   object-fit: contain;
    z-index: 1;
-   border-radius: 25px;
+   border-radius: 15px;
 `;
 
 const Badge = styled.img`
@@ -150,7 +150,7 @@ const PortfolioCard = (props) => {
       className="item"
     >
       <Title>{title}</Title>
-      <Image src={img} alt="project iamge" />
+      <Image src={img} alt="project image" />
       {fullStack
             && (
             <Badge

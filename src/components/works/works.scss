@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .works {
-  background-image: url('../../../public/assets/works-bg.png');
+  background-image: url('../../../public/assets/laptop_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -9,6 +9,16 @@
   justify-content: center;
   position: relative;
   height: 100vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.75);
+  }
 
   @include mobile {
     flex-direction: column;

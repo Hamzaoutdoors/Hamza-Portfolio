@@ -19,8 +19,8 @@ const SkillsBtn = styled(Button)`
   color: white !important;
   border: 1px solid #6d7993 !important;
   border-radius: 10px !important;
-  padding: 0.3rem !important;
-  font-size: 0.8rem !important;
+  padding: 0.3rem 0.5 !important;
+  font-size: 0.5rem !important;
 &:hover {
   color: #6d7993 !important;
   background-color: white !important;
@@ -132,7 +132,7 @@ const SkillsDetail = ({ SkillDetail }) => {
   return (
     <>
       <SkillsBtn variant="outlined" onClick={handleClickOpen}>
-        Skills Stack
+        See Skills Stack
       </SkillsBtn>
 
       <BootstrapDialog
