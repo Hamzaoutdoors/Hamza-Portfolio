@@ -1,96 +1,96 @@
 export const webPortfolio = [
   {
     id: 1,
-    title: 'Math Magicians App',
-    sourceUrl: 'https://github.com/Hamzaoutdoors/math-magicians',
-    liveUrl: 'https://hamzaoutdoors-math-magicians.herokuapp.com/',
-    img: 'https://i.ibb.co/qBxNXSn/Blackboard-International-Day-of-Education-Greeting-Card.png',
+    title: 'E-lectric Website',
+    sourceUrl: 'https://github.com/Hamzaoutdoors/e-lectro-frontend',
+    liveUrl: 'https://www.figma.com/design/l36JcXkKYN13F8s5I9X1VN/e-lectro--eCommerce-website-2023-?m=auto&t=gkGV3LZiyWaGcvNN-6',
+    img: './assets/projects/electroWeb.webp',
   },
-  {
+  /*   {
     id: 2,
     title: 'Coffee Shop App',
     sourceUrl:
     'https://github.com/Hamzaoutdoors/CoffeeJunkie',
     liveUrl: 'https://hamzaoutdoors-coffeejunkie.netlify.app/',
     img: 'https://i.ibb.co/j3jRYPt/Blackboard-International-Day-of-Education-Greeting-Card-1.png',
-  },
+  }, */
   {
-    id: 3,
+    id: 2,
     title: 'Rental Cars App',
     sourceUrl: 'https://github.com/Hamzaoutdoors/rentalcars_frontend',
     liveUrl: 'https://hanjelscars.netlify.app/',
-    img: 'https://i.ibb.co/280SVhw/7.png',
+    img: './assets/projects/rentWeb.webp',
   },
   {
-    id: 4,
+    id: 3,
     title: 'Space Travelers Hub',
     sourceUrl: 'https://github.com/Hamzaoutdoors/Space-Travelers-Hub',
     liveUrl: 'https://space-traveler-hub-hl.netlify.app/',
-    img: 'https://i.ibb.co/k4zgGFh/2.png',
+    img: './assets/projects/swarakhWeb.webp',
   },
   {
-    id: 5,
+    id: 4,
     title: 'Code & Outdoors website',
     sourceUrl: 'https://github.com/Hamzaoutdoors/Code_Outdoors_Meetings',
     liveUrl: 'https://hamzaoutdoors.github.io/Code_Outdoors_Meetings/',
-    img: 'https://i.ibb.co/JpQYgf7/3.png',
+    img: './assets/projects/codingWeb.webp',
   },
   {
-    id: 6,
+    id: 5,
     title: 'Series lovers App',
     sourceUrl: 'https://github.com/Hamzaoutdoors/Serie_Lovers---JS-Capstone-',
     liveUrl: 'https://hamzaoutdoors.github.io/Serie_Lovers---JS-Capstone-/',
-    img: 'https://i.ibb.co/ZhChHGx/4.png',
+    img: './assets/projects/moviesWeb.webp',
   },
 ];
 
 export const mobilePortfolio = [
-  {
+/*   {
     id: 1,
     title: 'Covid19 Tracker App',
     sourceUrl: 'https://github.com/Hamzaoutdoors/Corona-Tracker__react-capstone',
     liveUrl: 'https://ho-coronatracker21.netlify.app/',
     img:
         'https://i.ibb.co/wLH7Ph1/5.png',
+  }, */
+  {
+    id: 1,
+    title: 'R3 Logistics App',
+    sourceUrl: 'https://github.com/Hamzaoutdoors/R3_front',
+    liveUrl: 'https://www.figma.com/design/5Cgv8gI7Y5b8ToCPL3EASq/R3-Logistic--1--Copy-?m=auto&t=gkGV3LZiyWaGcvNN-6',
+    img:
+        './assets/projects/r3Mobile.webp',
   },
   {
     id: 2,
-    title: 'E-Wallet App',
-    sourceUrl: 'https://github.com/Hamzaoutdoors/E_Wallet_app',
-    liveUrl: 'https://e-wallet-app1.herokuapp.com/',
-    img:
-        'https://i.ibb.co/pfMBzmB/6.png',
-  },
-  {
-    id: 3,
     title: 'Rental Cars App',
     sourceUrl: 'https://github.com/Hamzaoutdoors/rentalcars_frontend',
     liveUrl: 'https://hanjelscars.netlify.app/',
-    img: 'https://i.ibb.co/HF49vgg/1.png',
+    img: './assets/projects/rentMobile.webp',
   },
   {
-    id: 4,
+    id: 3,
     title: 'My Blog App',
     sourceUrl: 'https://github.com/Hamzaoutdoors/Blog_app',
     liveUrl: 'https://hanjelscars.netlify.app/',
     img:
-        'https://i.ibb.co/L5FjKvr/Yellow-and-Black-Modern-Automobile-Car-Project-Outline-Document-940-940-px-940-788-px.png',
+        './assets/projects/blocAppmobile.webp',
+  },
+  {
+    id: 4,
+    title: 'Bouygues Telecom',
+    sourceUrl: '',
+    liveUrl: 'https://www.assistance.bouyguestelecom.fr/s/application-mobile-espace-client',
+    img:
+        './assets/projects/bytelMobile.webp',
   },
   {
     id: 5,
-    title: 'R3 LOGISTICS',
-    sourceUrl: 'https://github.com/Hamzaoutdoors/R3_front',
-    liveUrl: 'https://www.figma.com/file/tUtlSufwewx5IlsG7exQye/R3-Logistic-%231?node-id=328%3A3156&t=plkTWmZ7nCpuzRXl-0',
+    title: 'NeoKraal Ecosystem App',
+    sourceUrl: 'https://github.com/Hamzaoutdoors/NeoKraal-App/tree/androidv2',
+    liveUrl: 'https://www.figma.com/design/MfrlSS8YtB4GaRG3LSRvYt/NeoKraal-Market-Place?m=auto&t=jPnEsT7nhpEgNq1L-6',
     img:
-        'https://i.ibb.co/2cSq2PR/Yellow-and-Black-Modern-Automobile-Car-Project-Outline-Document-940-940-px-940-788-px.png',
-  },
-  {
-    id: 6,
-    title: 'NeoKraal Market Place',
-    sourceUrl: 'https://github.com/Hamzaoutdoors/NeokraalV2',
-    liveUrl: 'https://play.google.com/store/apps/details?id=com.neo_front',
-    img:
-        'https://user-images.githubusercontent.com/80895497/162425705-e4a64bc3-1ea4-4c12-bda4-614e98ae0898.PNG',
+        './assets/projects/neoKMobile.webp',
   },
 ];
 

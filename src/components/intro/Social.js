@@ -43,13 +43,42 @@ const SocialLink = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 34px;
+    height: 34px;
     margin: 0;
     padding: 0;
     text-decoration: none;
     color: #1e1e1e;
 
     &:hover {
-      transform: scale(1.12);
+      transform: scale(1.06);
+    }
+`;
+
+const SocialIcon = styled.img`
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+
+    /* match "skills icons" tint */
+    filter: grayscale(1) saturate(0) contrast(1.2) brightness(0.25);
+    opacity: 0.9;
+
+    /* allow per-icon scaling (default 1) */
+    transform: scale(var(--icon-scale, 1));
+    transform-origin: center;
+
+    transition: opacity 160ms ease, transform 160ms ease;
+
+    ${phone({
+    width: '20px',
+    height: '20px',
+  })};
+
+    ${SocialLink}:hover & {
+      opacity: 1;
+      transform: scale(var(--icon-scale, 1)) translateY(-1px);
     }
 `;
 
@@ -63,9 +92,10 @@ const Social = () => (
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
-          <img src="assets/socials/github.svg" alt="github icon" />
+          <SocialIcon src="assets/socials/github.svg" alt="" />
         </SocialLink>
       </SocialItem>
+
       <SocialItem>
         <SocialLink
           href="https://www.linkedin.com/in/hamzaellaouzi/?locale=en_US"
@@ -73,29 +103,23 @@ const Social = () => (
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-          <img src="assets/socials//linkedin.svg" alt="linkedIn icon" />
+          {/* fix double slash */}
+          <SocialIcon src="assets/socials/linkedin.svg" alt="" />
         </SocialLink>
       </SocialItem>
-      <SocialItem>
-        <SocialLink
-          href="https://angel.co/u/hamza-ellaouzi"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="AngelList"
-        >
-          <img src="assets/socials/angelist.svg" alt="angelist icon" />
-        </SocialLink>
-      </SocialItem>
+
       <SocialItem>
         <SocialLink
           href="https://twitter.com/EllaouziHamza"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="X"
         >
-          <img src="assets/socials/twitter.svg" alt="twitter icon" />
+          {/* X tends to have more visual weight; scale it down slightly */}
+          <SocialIcon src="assets/socials/x.svg" alt="" style={{ '--icon-scale': 0.85 }} />
         </SocialLink>
       </SocialItem>
+
       <SocialItem>
         <SocialLink
           href="https://medium.com/@hamzaellaouzi"
@@ -103,12 +127,11 @@ const Social = () => (
           rel="noopener noreferrer"
           aria-label="Medium"
         >
-          <img src="assets/socials/medium.svg" alt="medium icon" />
+          <SocialIcon src="assets/socials/medium.svg" alt="" />
         </SocialLink>
       </SocialItem>
     </SocialList>
   </Container>
-
 );
 
 export default Social;

@@ -15,11 +15,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+      padding: 0 16px; /* avoid top padding pushing items down */
+    }
 
     .left {
       display: flex;
       align-items: center;
       width: 100%;
+      height: 100%;
 
       .right {
         display: flex;
@@ -28,16 +34,19 @@
       }
 
       .hamburger {
-        width: 32px;
-        height: 25px;
+        width: 36px;
+        height: 36px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center; /* instead of space-between */
+        gap: 7px;               /* consistent spacing between lines */
         cursor: pointer;
-        margin-right: 16px;
+        margin-right: 12px;
         background: transparent;
         border: 0;
         padding: 0;
+        align-self: center;
+        box-sizing: border-box;
 
         span {
           width: 100%;
@@ -48,7 +57,7 @@
         }
 
         @include mobile {
-          margin-right: 10px;
+          margin-right: 12px;
         }
       }
 
@@ -69,8 +78,7 @@
         }
 
         @include mobile {
-          margin-right: 10px;
-          font-size: 30px;
+          display: none;
         }
       }
 

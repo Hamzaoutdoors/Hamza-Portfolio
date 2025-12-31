@@ -1,8 +1,42 @@
 $mainColor: #374151; // Slate 700
-
 $mobileWidth: 768px;
 
 @mixin mobile {
   @media (max-width: #{$mobileWidth}) {
-    @content; }
+    @content;
+  }
+}
+
+/* --- add these global tokens / base styles --- */
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: rgba(17, 24, 39, 0.10);
+
+  --shadow-sm: 0 2px 10px rgba(17, 24, 39, 0.06);
+  --shadow-md: 0 10px 30px rgba(17, 24, 39, 0.10);
+
+  --radius: 20px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid rgba(55, 65, 81, 0.55);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
