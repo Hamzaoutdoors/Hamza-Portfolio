@@ -3,34 +3,33 @@
 .footer {
   background-color: #414141;
   width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
   text-align: left;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 16px;
   padding: 30px 50px;
-  max-height: 220px;
+  max-height: none;
 
   @include mobile {
     padding: 20px;
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     font-size: 14px;
+    flex-direction: column;
   }
-
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    display: inline-block;
-    vertical-align: top;
-  }
-
 
   .footer-left {
-    width: 33%;
+    flex: 0 0 33%;
+    max-width: 33%;
     padding-right: 15px;
 
     @include mobile {
-      width: 100%;
+      flex: 0 0 auto;
+      max-width: 100%;
       padding-right: 0;
     }
   }
@@ -75,12 +74,19 @@
     }
   }
 
+  .icons a svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .footer-center {
-    width: 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
     margin-top: 10px;
 
     @include mobile {
-      width: 100%;
+      flex: 0 0 auto;
+      max-width: 100%;
       margin: 40px 0;
     }
   }
@@ -88,14 +94,15 @@
   .footer-center .i {
     background-color: $mainColor;
     color: #fff;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    text-align: center;
-    line-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin: 10px 15px;
     vertical-align: middle;
-    padding: 5px;
+    padding: 4px;
 
     @include mobile {
       margin-left: 0;
@@ -122,10 +129,79 @@
   }
 
   .footer-right {
-    width: 35%;
+    flex: 1 1 35%;
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
 
     @include mobile {
-      width: 100%;
+      margin-top: 10px;
+    }
+
+    .footer-title {
+      color: #fff;
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .footer-subtitle {
+      color: #fff;
+      margin: 12px 0 8px 0;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer-linksBlock {
+      text-align: center;
+    }
+
+    .footer-cta a {
+      display: inline-block;
+      background-color: $mainColor;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 10px;
+    }
+
+    .footer-cta a:hover {
+      background-color: #fff;
+      color: $mainColor;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 14px;
+      margin-top: 6px;
+    }
+
+    .footer-links a {
+      color: #09f;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: auto;
+      padding-top: 14px;
+    }
+
+    .footer-meta {
+      color: rgba(255, 255, 255, 0.85);
+      margin: 10px 0 0 0;
+      font-weight: 500;
+      font-size: 12px;
+    }
+
+    @include mobile {
+      flex: 0 0 auto;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;

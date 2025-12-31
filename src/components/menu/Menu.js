@@ -33,7 +33,13 @@ const Link = styled.a`
 `;
 
 const Menu = ({ menuOpen, setMenuOpen }) => (
-  <Container className={`menu ${menuOpen && 'active'}`}>
+  <Container
+    id="primary-navigation"
+    className={`menu ${menuOpen && 'active'}`}
+    role="navigation"
+    aria-label="Primary"
+    aria-hidden={!menuOpen}
+  >
     <List>
       {
         links.map((link) => (

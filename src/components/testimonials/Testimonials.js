@@ -11,13 +11,27 @@ const Testimonials = () => (
           key={test.id}
         >
           <div className="top">
-            <img src="assets/right-arrow.png" className="left" alt="" />
+            <img
+              src="assets/right-arrow.png"
+              className="left"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
             <img
               className="user"
               src={test.img}
-              alt=""
+              alt={`${test.name} avatar`}
+              loading="lazy"
+              decoding="async"
             />
-            <img className="right" src={test.icon} alt="" />
+            <img
+              className="right"
+              src={test.icon}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div className="center">
             {test.desc}

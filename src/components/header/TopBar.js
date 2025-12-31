@@ -14,6 +14,18 @@ const TopBar = ({ menuOpen, setMenuOpen }) => {
     <div className={`topbar ${menuOpen && 'active'}`}>
       <div className="wrapper">
         <div className="left">
+          <button
+            className="hamburger"
+            type="button"
+            onClick={handleMenuClick}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
+          >
+            <span className="line1" />
+            <span className="line2" />
+            <span className="line3" />
+          </button>
           <a href="#intro" className="logo">
             <motion.img
               src="./assets/images/2.png"
@@ -55,20 +67,15 @@ const TopBar = ({ menuOpen, setMenuOpen }) => {
               }}
             />
           </a>
-          <div className="itemContainer">
-            <Person className="icon" />
-            <span>(+212) 691 47 51 61</span>
-          </div>
-          <div className="itemContainer">
-            <Mail className="icon" />
-            <span>ellaouzihamza@gmail.com</span>
-          </div>
-        </div>
-        <div className="right">
-          <div className="hamburger" onClick={handleMenuClick} role="button" tabIndex={0} aria-hidden="true">
-            <span className="line1" />
-            <span className="line2" />
-            <span className="line3" />
+          <div className="right">
+            <div className="itemContainer">
+              <Person className="icon" />
+              <span>(+212) 691 47 51 61</span>
+            </div>
+            <div className="itemContainer">
+              <Mail className="icon" />
+              <span>ellaouzihamza@gmail.com</span>
+            </div>
           </div>
         </div>
       </div>

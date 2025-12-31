@@ -150,12 +150,19 @@ const PortfolioCard = (props) => {
       className="item"
     >
       <Title>{title}</Title>
-      <Image src={img} alt="project iamge" />
+      <Image
+        src={img}
+        alt={`${title} preview`}
+        loading="lazy"
+        decoding="async"
+      />
       {fullStack
             && (
             <Badge
               src={badgeImg}
-              alt=""
+              alt="Full-stack badge"
+              loading="lazy"
+              decoding="async"
             />
             )}
       <Info>

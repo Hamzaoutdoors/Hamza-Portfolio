@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import styled from 'styled-components';
@@ -51,14 +50,42 @@ const Footer = () => (
       </div>
       <div>
         <Email className="i" />
-        <p><a href="#"> ellaouzihamza@gmail.com</a></p>
+        <p><a href="mailto:ellaouzihamza@gmail.com"> ellaouzihamza@gmail.com</a></p>
       </div>
     </div>
+
     <div className="footer-right col-md-4 col-sm-6">
-      <div className="imgContainer">
-        <img src="./assets/images/footer.png" alt="hamza" />
+      <p className="footer-title">Available for freelance/CDI challenges</p>
+
+      <div className="footer-linksBlock">
+        <p className="footer-subtitle">Quick Links</p>
+        <div className="footer-links">
+          <a href="#intro">About / Intro</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#works">Skills / Works</a>
+          <a href="#contact">Contact</a>
+          <a
+            href="/assets/cv/Hamza_Ellaouzi_CV.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
+          </a>
+          <a href="/assets/cv/Hamza_Ellaouzi_CV.pdf" download>
+            Download PDF
+          </a>
+        </div>
       </div>
-      <p className="name"> Copy Right &copy; 2022</p>
+
+      <div className="footer-bottom">
+        <p className="footer-meta">Made with React • SCSS • Framer Motion • MUI  with &#x2764;</p>
+        <p className="footer-meta">
+          ©
+          {new Date().getFullYear()}
+          {' '}
+          Hamza El Laouzi
+        </p>
+      </div>
     </div>
   </FooterContainer>
 );

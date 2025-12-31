@@ -30,7 +30,7 @@ const SocialItem = styled.li`
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      transform: rotate(360deg) scale(1.1);
+      transform: scale(1.08);
     }
 
     ${phone({
@@ -49,18 +49,19 @@ const SocialLink = styled.a`
     color: #1e1e1e;
 
     &:hover {
-      transform: rotate(360deg) scale(1.3);
+      transform: scale(1.12);
     }
 `;
 
 const Social = () => (
   <Container>
-    <SocialList class="socials">
+    <SocialList className="socials">
       <SocialItem>
         <SocialLink
           href="https://github.com/Hamzaoutdoors"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub"
         >
           <img src="assets/socials/github.svg" alt="github icon" />
         </SocialLink>
@@ -70,6 +71,7 @@ const Social = () => (
           href="https://www.linkedin.com/in/hamzaellaouzi/?locale=en_US"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn"
         >
           <img src="assets/socials//linkedin.svg" alt="linkedIn icon" />
         </SocialLink>
@@ -79,6 +81,7 @@ const Social = () => (
           href="https://angel.co/u/hamza-ellaouzi"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="AngelList"
         >
           <img src="assets/socials/angelist.svg" alt="angelist icon" />
         </SocialLink>
@@ -88,6 +91,7 @@ const Social = () => (
           href="https://twitter.com/EllaouziHamza"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Twitter"
         >
           <img src="assets/socials/twitter.svg" alt="twitter icon" />
         </SocialLink>
@@ -97,6 +101,7 @@ const Social = () => (
           href="https://medium.com/@hamzaellaouzi"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Medium"
         >
           <img src="assets/socials/medium.svg" alt="medium icon" />
         </SocialLink>

@@ -27,7 +27,7 @@ export default function Works() {
               <div className="left">
                 <div className="leftContainer">
                   <div className="imgContainer">
-                    <img src={d.icon} alt="" />
+                    <img src={d.icon} alt="" loading="lazy" decoding="async" />
                   </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
@@ -40,6 +40,8 @@ export default function Works() {
                 <img
                   src={d.img}
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

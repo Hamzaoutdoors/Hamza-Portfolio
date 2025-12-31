@@ -102,7 +102,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        './assets/certificates/htmlcss-cred.png',
+        './assets/certificates/htmlcss-cred.webp',
   },
   {
     id: 2,
@@ -111,7 +111,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        './assets/certificates/js-cred.png',
+        './assets/certificates/js-cred.webp',
   },
   {
     id: 3,
@@ -120,7 +120,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        './assets/certificates/react-cred.png',
+        './assets/certificates/react-cred.webp',
   },
   {
     id: 4,
@@ -129,7 +129,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        './assets/certificates/ruby-cred.png',
+        './assets/certificates/ruby-cred.webp',
   },
   {
     id: 5,
@@ -138,7 +138,7 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        './assets/certificates/ror-cred.png',
+        './assets/certificates/ror-cred.webp',
   },
   {
     id: 6,
@@ -147,9 +147,9 @@ export const credentials = [
     sourceUrl: false,
     liveUrl: false,
     img:
-        './assets/certificates/diplomat.png',
+        './assets/certificates/diplomat.webp',
     badgeImg:
-        './assets/certificates/badge.png',
+        './assets/certificates/badge.webp',
     fullStack: true,
   },
 ];
