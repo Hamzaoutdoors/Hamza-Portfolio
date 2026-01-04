@@ -19,15 +19,39 @@ export default function Intro() {
 
   useEffect(() => {
     init(textRef.current, {
-      showCursor: true,
+      showCursor: false,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ['Ruby on Rails Developer', 'ReactJS Enthusiast', 'GIS Engineer'],
+      strings: [' Mobile / React Native', ' Full-Stack / MERN', ' Frontend / React.js'],
     });
   }, []);
 
   return (
     <div className="intro" id="intro">
+      <motion.div
+        className="left"
+        initial={{
+          opacity: 0,
+          translateX: 70,
+        }}
+        animate={{
+          opacity: 1.2,
+          translateX: -5,
+        }}
+        transition={{
+          duration: 0.6,
+          delay: 0.4,
+        }}
+      >
+        <div className="imgContainer">
+          <img
+            src="assets/images/me1.webp"
+            alt="Portrait of Me"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      </motion.div>
       <motion.div
         className="right"
         initial={{
@@ -46,38 +70,34 @@ export default function Intro() {
         <Social />
         <div className="wrapper">
           <h2>Hi There, I'm</h2>
-          <h1>El Laouzi Hamza</h1>
+          <h1>El LAOUZI Hamza</h1>
           <h3>
-            Freelance
-            {' '}
+            Engineer
             <span ref={textRef} />
           </h3>
-          <ResumeButton href="https://drive.google.com/file/d/1ZP4CqrDBnGgCJMPAcoTD-GJiGErRMFqD/view" className="btn" target="_blank" rel="noreferrer">
-            Get My Resume
-          </ResumeButton>
+          <div className="cta-group">
+            <a href="#contact" className="btn" aria-label="Contact Me">
+              Contact Me
+            </a>
+            <ResumeButton
+              href="/assets/cv/Hamza_Ellaouzi_CV.pdf"
+              className="btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Get My Resume
+            </ResumeButton>
+          </div>
         </div>
         <a href="#portfolio" className="down">
-          <img src="assets/down.png" alt="" />
+          <img
+            src="assets/down.png"
+            alt="Scroll down to portfolio"
+            width="30"
+            height="30"
+            decoding="async"
+          />
         </a>
-      </motion.div>
-      <motion.div
-        className="left"
-        initial={{
-          opacity: 0,
-          translateX: 70,
-        }}
-        animate={{
-          opacity: 1.2,
-          translateX: -5,
-        }}
-        transition={{
-          duration: 0.6,
-          delay: 0.4,
-        }}
-      >
-        <div className="imgContainer">
-          <img src="assets/images/me2.png" alt="" />
-        </div>
       </motion.div>
     </div>
   );

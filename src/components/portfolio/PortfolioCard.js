@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { PreviewOutlined, GitHub } from '@mui/icons-material';
 import { mobile } from '../../responsive';
 import './portfolio.scss';
@@ -26,9 +27,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     color: #fff;
-    margin: 20px;
+    margin: 10px;
     width: 25%;
-    height: 200px;
+    height: auto;
+    aspect-ratio: ${(props) => props.ratio || 16 / 9};
     border-radius: 25px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border: 1px solid rgb(240, 239, 239);
@@ -37,12 +39,12 @@ const Container = styled.div`
     align-items: center;
     background-color: transparent;
     position: relative;
+    overflow: hidden;
     &:hover ${Info}{
         opacity: 1;
     }
     ${mobile({
     width: '35%',
-    maxHeight: '100px',
   })};
 `;
 
@@ -53,20 +55,30 @@ const Title = styled.h3`
 `;
 
 const Image = styled.img`
-   width: 100%;
-   height: 100%;
-   object-fit: fill;
-   z-index: 1;
-   border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  z-index: 1;
+  border-radius: 25px;
 `;
 
 const Badge = styled.img`
-    position: absolute;
-    bottom: -15px;
-    right: -25px;
-    width: 50px;
-    height: 50px;
-    z-index: 2;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  z-index: 4; /* above Info overlay */
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  ${mobile({
+    width: '44px',
+    height: '44px',
+    top: '8px',
+    right: '8px',
+  })};
 `;
 
 const Icon = styled.div`
@@ -122,6 +134,7 @@ const CredentialButton = styled.a`
 `;
 
 const PortfolioCard = (props) => {
+  const [ratio, setRatio] = useState(16 / 9);
   const { item } = props;
   const {
     id,
@@ -134,6 +147,7 @@ const PortfolioCard = (props) => {
 
   return (
     <Container
+      ratio={ratio}
       as={motion.div}
       initial={{
         opacity: 0,
@@ -150,12 +164,26 @@ const PortfolioCard = (props) => {
       className="item"
     >
       <Title>{title}</Title>
-      <Image src={img} alt="project iamge" />
+      <Image
+        className="card-image"
+        src={img}
+        alt={`${title} preview`}
+        loading="lazy"
+        decoding="async"
+        onLoad={(e) => {
+          const { naturalWidth, naturalHeight } = e.target;
+          if (naturalWidth && naturalHeight) {
+            setRatio(naturalWidth / naturalHeight);
+          }
+        }}
+      />
       {fullStack
             && (
             <Badge
               src={badgeImg}
-              alt=""
+              alt="Full-stack badge"
+              loading="lazy"
+              decoding="async"
             />
             )}
       <Info>
@@ -170,24 +198,28 @@ const PortfolioCard = (props) => {
           </CredentialButton>
         ) : (
           <>
-            <Icon bg="e9f5f5">
-              <a
-                href={liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <PreviewOutlined />
-              </a>
-            </Icon>
-            <Icon bg="d86a77">
-              <a
-                href={sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHub />
-              </a>
-            </Icon>
+            {liveUrl ? (
+              <Icon bg="e9f5f5">
+                <a
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <PreviewOutlined />
+                </a>
+              </Icon>
+            ) : null}
+            {sourceUrl ? (
+              <Icon bg="d86a77">
+                <a
+                  href={sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHub />
+                </a>
+              </Icon>
+            ) : null}
           </>
         )
         }

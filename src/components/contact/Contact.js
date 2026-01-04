@@ -3,6 +3,7 @@
 import './contact.scss';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { Send } from '@mui/icons-material';
 import axios from 'axios';
 
 const ContactWrapper = styled.div``;
@@ -94,13 +95,28 @@ const Contact = () => {
   return (
     <ContactWrapper className="contact" id="contact">
       <Left className="left">
-        <img src="assets/images/contactme1.svg" alt="" />
+        <h2 className="contact-title">Let’s discuss</h2>
+        <h2 className="contact-subtitle">
+          on something
+          {' '}
+          <span className="accent">cool</span>
+          {' '}
+          together
+        </h2>
+        <p className="contact-label">I’m interested in ..</p>
+        <div className="chips">
+          {[
+            'Ecommerce Website',
+            'App Development',
+            'Web Development',
+            'UI/UX Design',
+          ].map((t) => (
+            <span className="chip" key={t}>{t}</span>
+          ))}
+        </div>
       </Left>
       <Right className="right">
-        <h2>CONTACT.</h2>
-        <h3>
-          I am always open to new opportunities and would love to hear from you.
-        </h3>
+
         <form onSubmit={handleOnSubmit}>
           <input
             id="name"
@@ -132,10 +148,12 @@ const Contact = () => {
             onChange={handleOnChange}
             required
           />
+
           <button type="submit" disabled={status.submitting}>
+            <Send className="cta-icon" />
             {!status.submitting
               ? !status.submitted
-                ? 'Get In Touch'
+                ? 'Submit'
                 : 'Submitted'
               : 'Submitting...'}
           </button>

@@ -15,10 +15,51 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+      padding: 0 16px; /* avoid top padding pushing items down */
+    }
 
     .left {
       display: flex;
       align-items: center;
+      width: 100%;
+      height: 100%;
+
+      .right {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+      }
+
+      .hamburger {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* instead of space-between */
+        gap: 7px;               /* consistent spacing between lines */
+        cursor: pointer;
+        margin-right: 12px;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        align-self: center;
+        box-sizing: border-box;
+
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: $mainColor;
+          transform-origin: left;
+          transition: all 1.2s ease;
+        }
+
+        @include mobile {
+          margin-right: 12px;
+        }
+      }
 
       .logo {
         font-size: 40px;
@@ -33,17 +74,17 @@
           height: 50px;
           object-fit: contain;
           margin: 5px;
+          filter: grayscale(1) opacity(0.7);
         }
 
         @include mobile {
-          margin-right: 10px;
-          font-size: 30px;
+          display: none;
         }
       }
 
       .itemContainer {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         margin-left: 30px;
 
         @include mobile {
@@ -58,25 +99,6 @@
         span {
           font-size: 15px;
           font-weight: 500;
-        }
-      }
-    }
-
-    .right {
-      .hamburger {
-        width: 32px;
-        height: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-
-        span {
-          width: 100%;
-          height: 3px;
-          background-color: $mainColor;
-          transform-origin: left;
-          transition: all 1.2s ease;
         }
       }
     }

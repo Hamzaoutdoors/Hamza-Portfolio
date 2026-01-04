@@ -3,18 +3,22 @@
 .menu {
   width: 300px;
   height: 100vh;
-  background-color: $mainColor;
+  // Softer, semi-transparent gray overlay with blur
+  background-color: rgba(60, 66, 80, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
-  right: -300px;
+  left: -300px;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 1s ease;
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.18);
 
   &.active {
-    right: 0;
+    left: 0;
   }
 }

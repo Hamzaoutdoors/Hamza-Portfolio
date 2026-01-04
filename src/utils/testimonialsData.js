@@ -15,7 +15,7 @@ const testimonialsData = [
     title: 'Software Engineer',
     img:
         './assets/images/nelsino.png',
-    icon: 'assets/twitter.png',
+    icon: './assets/twitter.png',
     desc:
         'I love this boy! So easy to work with, always helpful and can always give you insights on how to make your code better you would love to have him as a coding partner',
     featured: true,

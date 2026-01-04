@@ -17,11 +17,11 @@ export default function Portfolio() {
   const list = [
     {
       id: 'web',
-      title: 'Web Design',
+      title: 'Web Applications',
     },
     {
       id: 'mobile',
-      title: 'Mobile Design',
+      title: 'Mobile Applications',
     },
     {
       id: 'credentials',
@@ -62,9 +62,9 @@ export default function Portfolio() {
           />
         ))}
       </ul>
-      <Container className="container">
+      <Container className="container" key={selected}>
         {data.map((d) => (
-          <PortfolioCard item={d} key={d.id} />
+          <PortfolioCard item={d} key={`${selected}-${d.id}`} />
         ))}
       </Container>
     </div>
