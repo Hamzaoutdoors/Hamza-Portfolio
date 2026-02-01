@@ -40,8 +40,16 @@ const Container = styled.div`
     background-color: transparent;
     position: relative;
     overflow: hidden;
+    transition: background 0.4s ease;
     &:hover ${Info}{
         opacity: 1;
+    }
+    &:hover {
+      background: linear-gradient(135deg, #a0e7ff 0%, #ffa0c3 100%);
+    }
+    &:hover img.card-image {
+      filter: none;
+      opacity: 1;
     }
     ${mobile({
     width: '35%',
@@ -61,6 +69,8 @@ const Image = styled.img`
   object-position: center;
   z-index: 1;
   border-radius: 25px;
+  filter: grayscale(1) brightness(1.06) contrast(0.92);
+  transition: filter 0.4s ease, opacity 0.4s ease;
 `;
 
 const Badge = styled.img`

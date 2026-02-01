@@ -270,21 +270,46 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            cursor: default;
             /* no animations, no hover transforms */
 
             @include mobile {
               padding: 8px;
+            }
+
+            &:hover,
+            &:focus-visible {
+              /* tint the card background with the tech color (fallback stays light) */
+              border-color: var(--bubble-color, #e5e7eb);
+              box-shadow: inset 0 0 0 999px color-mix(in srgb, var(--bubble-color, #000) 10%, white 90%),
+                0 6px 14px rgba(0,0,0,0.08);
+            }
+
+            &:hover .bubble-logo,
+            &:focus-visible .bubble-logo {
+              background-color: var(--bubble-color, #111827);
+              opacity: var(--logo-opacity, 1);
+            }
+
+            &:hover .bubble-name,
+            &:focus-visible .bubble-name {
+              opacity: 1;
+              transform: translateY(0);
+              background: color-mix(in srgb, var(--bubble-color, #000) 14%, white 86%);
+              border-color: color-mix(in srgb, var(--bubble-color, #000) 30%, white 70%);
+              color: #1f2937;
             }
           }
 
           .bubble-logo {
             width: 40px;
             height: 40px;
-            object-fit: contain;
             display: block;
-            /* force monochrome and visible even for white/transparencies */
-            filter: grayscale(1) saturate(0) contrast(1.2) brightness(0.25);
-            /* remove if any icons still too dark: tweak brightness to 0.35 */
+            background-color: #94a3b8; /* default gray icon */
+            -webkit-mask: var(--logo) center/contain no-repeat;
+            mask: var(--logo) center/contain no-repeat;
+            transition: background-color 180ms ease, transform 180ms ease, opacity 180ms ease;
             @include mobile {
               width: 26px;
               height: 26px;
@@ -292,6 +317,34 @@
             opacity: var(--logo-opacity, 1);
             transform: scale(var(--logo-scale, 1));
             transform-origin: center;
+          }
+
+          .bubble-name {
+            position: absolute;
+            left: 50%;
+            bottom: 6px;
+            transform: translate(-50%, 4px);
+            font-size: 10px;
+            line-height: 1;
+            font-weight: 500;
+            color: #3a3b3c;
+            text-transform: lowercase;
+            background: rgba(255,255,255,0.9); /* fallback; hover will tint */
+            padding: 2px 6px;
+            border-radius: 999px;
+            border: 1px solid #e5e7eb;
+            opacity: 0;
+            pointer-events: none;
+            white-space: nowrap;
+            max-width: 76%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: opacity 160ms ease, transform 160ms ease;
+
+            @include mobile {
+              font-size: 9px;
+              bottom: 4px;
+            }
           }
         }
       }
