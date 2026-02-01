@@ -72,9 +72,9 @@
       position: relative;
 
       &:hover {
-        background-color: transparent; // avoid the “blocky” hover
         .card-image {
-          opacity: 0.85; // softer than 0.5
+          filter: none;
+          opacity: 1;
         }
       }
     }

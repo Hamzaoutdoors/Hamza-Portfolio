@@ -82,18 +82,24 @@ export default function Works() {
               <div className="right">
                 <div className="bubble-cloud">
                   {d.skills && d.skills.map((skill) => (
-                    <div className="skill-bubble" key={skill.id}>
-                      <img
-                        src={skill.logo}
-                        alt={skill.name}
+                    <div
+                      className="skill-bubble"
+                      key={skill.id}
+                      tabIndex={0}
+                      aria-label={skill.name}
+                      style={{ '--bubble-color': skill.color }}
+                    >
+                      <span
                         className="bubble-logo"
-                        loading="lazy"
-                        decoding="async"
+                        role="img"
+                        aria-label={skill.name}
                         style={{
-                          '--logo-opacity': skill.logoOpacity ?? undefined,
-                          '--logo-scale': skill.logoScale ?? undefined,
+                          '--logo': `url(${skill.logo})`,
+                          '--logo-opacity': skill.logoOpacity ?? 1,
+                          '--logo-scale': skill.logoScale ?? 1,
                         }}
                       />
+                      <span className="bubble-name">{skill.name}</span>
                     </div>
                   ))}
                 </div>
